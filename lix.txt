@@ -1,0 +1,44 @@
+KMEANS (normalizado) TODOS OS PARAMETROS TIME VERMELHO E AZUL
+X = df.loc[:, ['blueWardsPlaced',	'blueWardsDestroyed',	'blueFirstBlood',	'blueKills',	'blueDeaths',
+               'blueAssists',	'blueEliteMonsters',	'blueDragons',	'blueHeralds',	       'blueTowersDestroyed',	'blueTotalGold',	'blueAvgLevel',	'blueTotalExperience',	'blueTotalMinionsKilled',	'blueTotalJungleMinionsKilled',	'blueGoldDiff',	'blueExperienceDiff',	'blueCSPerMin',	'blueGoldPerMin',
+               'redWardsPlaced',	'redWardsDestroyed',	'redFirstBlood',	'redKills',	'redDeaths',	'redAssists',	'redEliteMonsters',	'redDragons',	'redHeralds',	'redTowersDestroyed',	'redTotalGold',	'redAvgLevel',	'redTotalExperience',	'redTotalMinionsKilled',	'redTotalJungleMinionsKilled',	'redGoldDiff',	'redExperienceDiff',	'redCSPerMin',	'redGoldPerMin'] ].values 
+
+Accuracy: 0.60648
+Precision: 0.79398
+Recall: 0.27977
+
+
+KMEANS (normalizado) Apenas parametros da jg VERMELHO e AZUL
+X = df.loc[:, [	
+               	'blueEliteMonsters',	'blueDragons',	'blueHeralds',	       'blueTowersDestroyed',	'blueTotalJungleMinionsKilled',	
+              		'redEliteMonsters',	'redDragons',	'redHeralds',	'redTowersDestroyed',		'redTotalJungleMinionsKilled'] ].values 
+Accuracy: 0.50526
+Precision: 0.50170
+Recall: 0.48206
+
+
+
+KMEANS (normalizado) Objetivos da JG, torres e KDA
+X = df.loc[:, ['blueFirstBlood',	'blueKills',	'blueDeaths',
+               'blueAssists',	'blueEliteMonsters',	'blueDragons',	'blueHeralds',	       'blueTowersDestroyed',	
+              	'redFirstBlood',	'redKills',	'redDeaths',	'redAssists',	'redEliteMonsters',	'redDragons',	'redHeralds',	'redTowersDestroyed'] ].values 
+Accuracy: 0.54089
+Precision: 0.57986
+Recall: 0.27243
+
+
+KMEANS (normalizado) wards, KDA, nivel, golddif, xp
+X = df.loc[:, ['blueWardsPlaced',	'blueWardsDestroyed',	'blueFirstBlood',	'blueKills',	'blueDeaths',
+               'blueAssists',	'blueEliteMonsters',  'blueTowersDestroyed',	'blueAvgLevel',	'blueTotalExperience',	'blueTotalMinionsKilled',	'blueGoldDiff',	'blueExperienceDiff',	'blueCSPerMin',
+               'redWardsPlaced',	'redWardsDestroyed',	'redFirstBlood',	'redKills',	'redDeaths','redAssists',	'redEliteMonsters',		'redTowersDestroyed',	'redAvgLevel',	'redTotalExperience',	'redTotalMinionsKilled', 'redGoldDiff',	'redExperienceDiff'] ].values 
+Accuracy: 0.60243
+Precision: 0.82973
+Recall: 0.25041
+
+
+KMEANS (normalizado)
+X = df.loc[:, [	'blueTotalGold',	'blueAvgLevel',	'blueTotalExperience',	'blueGoldDiff',	'blueExperienceDiff',	'blueCSPerMin',	'blueGoldPerMin',
+            	'redTotalGold',	'redAvgLevel',	'redTotalExperience',	'redGoldDiff',	'redExperienceDiff',	'redCSPerMin',	'redGoldPerMin'] ].values 
+Accuracy: 0.60648
+Precision: 0.79263
+Recall: 0.28059
